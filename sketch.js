@@ -60,3 +60,12 @@ function mousePressed() {
     playing = false;
   }
 }
+function preload() {
+  sound = loadSound("07020209.wav", () => {
+    loaded = true;
+    console.log("Audio loaded");
+  }, () => {
+    console.error("Failed to load sound");
+  });
+}
+
