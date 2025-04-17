@@ -4,7 +4,7 @@ let loaded = false;
 let playing = false;
 
 function preload() {
-  sound = loadSound("07020209.wav", () => {
+  sound = loadSound("https://github.com/mbmotorcyclesproject/MBMP-home/blob/a5734285f390f7c45fe8110657ada5a909b99f64/07020209.wav", () => {
     loaded = true;
   });
 }
