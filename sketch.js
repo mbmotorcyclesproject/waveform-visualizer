@@ -4,6 +4,7 @@ let loaded = false;
 let playing = false;
 
 function preload() {
+  // ✅ Use RAW GitHub URL here
   sound = loadSound("https://github.com/mbmotorcyclesproject/waveform-visualizer/blob/main/07020209.wav", () => {
     loaded = true;
     console.log("Audio loaded");
@@ -21,19 +22,20 @@ function setup() {
 
 function draw() {
   background(0);
-  fill(255);
 
   if (!loaded) {
+    fill(255);
     text("Loading audio...", width / 2, height / 2);
     return;
   }
 
   if (!playing) {
+    fill(255);
     text("Click to play audio", width / 2, height / 2);
     return;
   }
 
-  // Draw waveform
+  // ✅ Animate waveform
   let waveform = fft.waveform();
   stroke(0, 255, 0);
   noFill();
@@ -46,6 +48,7 @@ function draw() {
   endShape();
 }
 
+// ✅ Click canvas to toggle play/pause
 function mousePressed() {
   if (!loaded) return;
 
