@@ -4,8 +4,11 @@ let loaded = false;
 let playing = false;
 
 function preload() {
-  sound = loadSound("https://github.com/mbmotorcyclesproject/MBMP-home/blob/main/07020209.wav", () => {
+  sound = loadSound("https://raw.githubusercontent.com/mbmotorcyclesproject/MBMP-home/main/07020209.wav", () => {
     loaded = true;
+    console.log("Audio loaded");
+  }, () => {
+    console.error("Failed to load sound");
   });
 }
 
